@@ -1,0 +1,16 @@
+// este archivo es para ejecutar el proyecto en cualquier parte 
+
+
+//importamos la variable app que contiene el servidor
+
+import app from "../../app.js";
+
+
+//nos llevamos el port de app.js (cortamos y pegamos aqui junto con el listen)
+const port = process.env.PORT || 3001
+
+app.listen(port, ()=>{
+    console.log('El servidor está ejecutándose correctamente, en el puerto ', port);
+});
+
+//4. ir al package. json y modificar scripts (cambiar la ruta de dev y start  -> src/bin/www)
