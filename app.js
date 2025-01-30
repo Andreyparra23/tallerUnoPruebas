@@ -19,5 +19,9 @@ app.use(express.json());
 app.use('/usuarios', usersRouter);
 app.use('/iniciarSesion', loginRouter);
 
+app.get('/',(req,res)=>{
+res.send("backen funcionando correctamente")
+})
+
 
 export default app;

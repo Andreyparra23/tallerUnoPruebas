@@ -51,7 +51,7 @@ describe("pruebas de los controladores de usuarios", () => {
     const res = await supertest(app).post("/usuarios").send({email:testUser.email});
 
     //definir que esperamos de esa respuesta
-    expect(res.body).toHaveProperty('mensaje','ocurrio un error al crear el usuario');
+    expect(res.body).toHaveProperty('mensaje','Ocurrió un error al crear un usuario');
   });
 
 
@@ -66,7 +66,7 @@ describe("pruebas de los controladores de usuarios", () => {
 it('deberia indicar que no hay usuarios almacenados',async()=> {
     const res = await supertest(app).get('/usuarios')
     expect(res.statusCode).toBe(200);
-    expect(res.body).toHaveProperty('mensaje','no hay usuarios almacenados')
+    expect(res.body).toHaveProperty('mensaje','No hay usuarios almacenados')
 })
 
   });
